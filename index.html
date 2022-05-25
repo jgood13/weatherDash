@@ -4,10 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
+    <header id="header">
+        <h1> Weather Dashboard</h1>
+    </header>
+    <main id="content">
+        <section class="left">
+            <div id="searchCard" class="card">
+                <h1 class="card-header">Search for city:</h1>
+                <form id="form" class="card-body input-group">
+                    <label class="form-label"> City:</label>
+                    <input id="cityInput"type="text">
+                    <button class="button-primary" id="searchBtn">Submit</button>
+                </form>
+            </div>
+            <div class="container">
+                <div id="cities" class="list-group">
+                </div>
+            </div>
+        </section>
+        
+        <div id="content2">
+            <div id="currentCity" class="card">
+                <h1 id="cityDisplay"></h1>
+                <i class="icon"></i>
+                <p class="temp"></p>
+                <p class="wind"></p>
+                <p class="humidity"></p>
+                <p class="uv"></p>
+            </div>
+            <div id="forecast" class="container flex-row">
+                <div id="forecastCards" class="card ">
+                    <p class="date2"></p>
+                    <i class="icon2" ></i>
+                    <p class="temp2"></p>
+                    <p class="wind2"></p>
+                    <p class="humidity2"></p>
+                </div>
+                <div id="forecastCards" class="card">
+                    <p class="date3"></p>
+                    <i class="icon3"></i>
+                    <p class="temp3"></p>
+                    <p class="wind3"></p>
+                    <p class="humidity3"></p>
+                </div>
+                <div id="forecastCards" class="card">
+                    <p class="date4"></p>
+                    <i class="icon4"></i>
+                    <p class="temp4"></p>
+                    <p class="wind4"></p>
+                    <p class="humidity4"></p>
+                </div>
+                <div id="forecastCards" class="card">
+                    <p class="date5"></p>
+                    <i class="icon5"></i>
+                    <p class="temp5"></p>
+                    <p class="wind5"></p>
+                    <p class="humidity5"></p>
+                </div>
+                <div id="forecastCards" class="card">
+                    <p class="date6"></p>
+                    <i class="icon6"></i>
+                    <p class="temp6"></p>
+                    <p class="wind6"></p>
+                    <p class="humidity6"></p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    
 
     <script src="./script.js"></script>
 </body>

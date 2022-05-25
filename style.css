@@ -1,0 +1,64 @@
+#header h1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: blue;
+    color: whitesmoke;
+    height: 5rem; 
+    width: 100%;
+}
+#content{
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    height: 80%;
+    width:100%;
+}
+
+#searchCard{
+    width: 100%;
+    display: flex;
+}
+
+#searchBtn{
+    background-color: green;
+}
+
+.container{
+    width:100%;
+    justify-content: left;
+}
+
+#cities {
+    width: 100%;
+}
+#content2{
+    display: flex;
+    flex-direction: column;
+}
+
+#currentCity{
+    border: 1px solid black;
+    width: 40rem;
+    height: 50%;
+    margin: 0 10px 0 10px;
+}
+#forecast{
+    display: flex;
+    flex: row;
+    height: 100%;
+    justify-content: space-between;
+}
+#forcastCards{
+    display:flex;
+    flex-direction:column;
+    border: 1px solid black;
+}
