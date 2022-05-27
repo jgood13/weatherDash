@@ -20,12 +20,13 @@
     flex-direction: column;
     justify-content: left;
     height: 80%;
-    width:100%;
+    width:12rem;
 }
 
 #searchCard{
     width: 100%;
     display: flex;
+    margin-top: 20%;
 }
 
 #searchBtn{
@@ -49,7 +50,7 @@
 #currentCity{
     border: 1px solid black;
     width: 52rem;
-    height: 40%;
+    height: 35%;
     margin: 0 10px 0 10px;
 }
 #forecast{
@@ -84,9 +85,19 @@
 }
 .ok {
     background-color: yellow;
-    color: antiquewhite;
+    color: black;
 }
 
 #uv {
     width:fit-content;
+}
+
+#pastCities{
+    margin-top: 1rem;
+}
+
+
+.bold{
+    font-weight: bolder;
+    font-size: large;
 }
