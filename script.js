@@ -28,17 +28,9 @@ $('.date4').text('('+moment().add(3,'days').format("MM-DD-YYYY")+')')
 $('.date5').text('('+moment().add(4,'days').format("MM-DD-YYYY")+')')
 $('.date6').text('('+moment().add(5,'days').format("MM-DD-YYYY")+')')
 
-$('#searchBtn').on('click', function(){
-    $('#today').removeClass('hideMe')
-    $('.date2').removeClass('hideMe')
-    $('.date3').removeClass('hideMe')
-    $('.date4').removeClass('hideMe')
-    $('.date5').removeClass('hideMe')
-    $('.date6').removeClass('hideMe')
-})
-
 var getWeather = function(city) {
     var apiKey = 'e6c7145ef0589d5c1799b396e8bd2be3'
+    $('.hideMe').removeClass('hideMe')
 
     let url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city +'&units=imperial&appid=' + apiKey   
 
@@ -68,7 +60,7 @@ var getWeather = function(city) {
             displayForecast (data)
         })
         var displayForecast= function(data){
-            uv1.textContent ='UV Index:'+ data.current.uvi
+            uv1.textContent =data.current.uvi
             $('.humidity').text('Humidity:'+data.current.humidity + '%')
             $('.icon').attr('src','http://openweathermap.org/img/wn/'+data.daily[0].weather[0].icon+'@2x.png')
             $('.icon2').attr('src','http://openweathermap.org/img/wn/'+data.daily[1].weather[0].icon+'@2x.png')
@@ -76,8 +68,8 @@ var getWeather = function(city) {
             $('.icon4').attr('src','http://openweathermap.org/img/wn/'+data.daily[3].weather[0].icon+'@2x.png')
             $('.icon5').attr('src','http://openweathermap.org/img/wn/'+data.daily[4].weather[0].icon+'@2x.png')
             $('.icon6').attr('src','http://openweathermap.org/img/wn/'+data.daily[5].weather[0].icon+'@2x.png')
-            $('.temp3').text('Temp:'+data.daily[2].temp.max+ '°F')
             $('.temp2').text('Temp:'+data.daily[1].temp.max+ '°F')
+            $('.temp3').text('Temp:'+data.daily[2].temp.max+ '°F')
             $('.temp4').text('Temp:'+data.daily[3].temp.max+ '°F')
             $('.temp5').text('Temp:'+data.daily[4].temp.max+ '°F')
             $('.temp6').text('Temp:'+data.daily[5].temp.max+ '°F')
@@ -94,10 +86,16 @@ var getWeather = function(city) {
             
             if (uv1.innerHTML > 5) {
                 uv1.classList.add('bad')
+                uv1.classList.remove('good')
+                uv1.classList.remove('ok')
             } else if (uv1.innerHTML > 2){
                 uv1.classList.add('ok')
+                uv1.classList.remove('bad')
+                uv1.classList.remove('good')
             } else{
                 uv1.classList.add('good')
+                uv1.classList.remove('ok')
+                uv1.classList.remove('bad')
             }
 
         }
